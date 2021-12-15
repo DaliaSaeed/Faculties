@@ -7,8 +7,6 @@ class SAdmin  {
         try {
             //if(!req.body.role || req.body.role =="Admin") throw new Error("Please choose an Sadmin type")
             const user = await new userModel(req.body)
-            console.log(user)
-            console.log(req.body)
             //user.role="SAdmin"
             await user.save()
             res.status(200).send({

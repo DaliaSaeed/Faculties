@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { RegisterService } from 'src/app/services/register/register.service';
 
 @Component({
@@ -7,17 +8,25 @@ import { RegisterService } from 'src/app/services/register/register.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  user= {
+    fname: "",
+    lname: "",
+    email: "",
+    password: "",
+    phone: "",
+    role: "",
+    image: ""
+  }
 
   msg=""
   constructor(private _auth:RegisterService) { }
 
   ngOnInit(): void {
   }
-  handleForm(userData:any){
+  handleForm(userData:NgForm){
     if(userData.valid){
-      console.log(userData.value)
-      this._auth.register(userData.value).subscribe(result=> console.log(result))
-      this.msg=""
+      this._auth.register(this.user).subscribe(result=> console.log(result))
+      this.msg="Done"
       userData.resetForm()
     }
     else{

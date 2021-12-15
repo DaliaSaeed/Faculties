@@ -21,7 +21,7 @@ router.delete('/deleteSingleNew/:id', auth('SAdmin'), sAdminController.deleteSin
 
 router.delete('/delAllNews', auth('SAdmin'), sAdminController.delAllNews)
 
-router.get('/AllUsers', auth('SAdmin'), sAdminController.readUsers)
+router.get('/AllUsers', sAdminController.readUsers)
 
 router.delete('/deleteUser/:id', auth('SAdmin'), sAdminController.deleteUser)
 
