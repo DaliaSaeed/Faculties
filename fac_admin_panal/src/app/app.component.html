@@ -1,2 +1,2 @@
-<app-sidebar></app-sidebar>
+<app-sidebar *ngIf="this._auth.isAuth"></app-sidebar>
 <router-outlet></router-outlet>

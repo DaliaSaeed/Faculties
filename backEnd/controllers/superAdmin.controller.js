@@ -1,5 +1,7 @@
 const userModel = require('../models/user.models')
 const newstModel = require('../models/news.models')
+const news = require('../models/news.models')
+const upload = require('../middleware/fileUpload')
 
 class SAdmin  {
 
@@ -98,8 +100,8 @@ class SAdmin  {
         try {
             const news = await new newstModel({
                 ...req.body,
-               owner: req.user._id,
-               img: req.file.filename
+               //owner: req.user._id,
+                   image: req.files
             })
             await news.save()
             res.status(200).send({
@@ -195,7 +197,10 @@ class SAdmin  {
             res.status(200).send({
                 apiStatus: true,
                 message: 'Succesfully Logged In',
-                data:  user
+                data:  {
+                    token,
+                     userData: user
+                    }
             })
         } catch (e) {
             res.status(500).send({
@@ -203,6 +208,10 @@ class SAdmin  {
                 message: e.message,
             })
         }
+    }
+
+    static profile =async(req,res)=>{
+        res.send(req.user)
     }
 
     static logOut = async (req, res) => {

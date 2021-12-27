@@ -7,15 +7,19 @@ import { ShowAllUsersService } from 'src/app/services/showAllUsers/show-all-user
   styleUrls: ['./show-all-users.component.scss']
 })
 export class ShowAllUsersComponent implements OnInit {
-  usersData:any =[]
+  usersData:any = [];
+  loaded:Boolean=false;
+  notFound:Boolean=false
 
   constructor(private _allUsers:ShowAllUsersService) { }
 
   ngOnInit(): void {
-    this._allUsers.getUsers().subscribe(data=>{
-      this.usersData = data
-      console.log(data)
-    })
+    this._allUsers.getUsers().subscribe(
+      (data)=>{this.usersData = data
+      console.log(data)},
+      (err)=>{this.notFound=true},
+      ()=>{this.loaded=true}
+    )
   }
 
 }

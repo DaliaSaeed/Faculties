@@ -1,5 +1,7 @@
 const mongoose = require("mongoose")
 const validator = require('validator')
+const path = require("path")
+const fs = require("fs")
 
 const NewsSchema = mongoose.Schema({
     title:{
@@ -17,16 +19,25 @@ const NewsSchema = mongoose.Schema({
     date:{
         type:Date
     },
-    img:{
-        type: String,
-        required: true
-    },
-    owner: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    }
+    image:[
+        {
+            fieldname: {type:String},
+            originalname: {type:String},
+            filename: {type:String},
+            name:{type:String},
+            path: {type:String}
+        }
+    ],
+    // owner: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'User',
+    //     required: true
+    // }
+},{
+    timestamps: true
 })
+
+
 
 const news = new mongoose.model('News', NewsSchema)
 

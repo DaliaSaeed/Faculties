@@ -100,6 +100,8 @@ userSchema.methods.generateToken =  function () {
     user.save()
     return token
 }
+
+
 const User = mongoose.model('User', userSchema)
 
 module.exports = User

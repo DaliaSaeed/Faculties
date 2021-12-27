@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -17,11 +17,15 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { RegisterComponent } from './Pages/Authentication/register/register.component';
 import { FacultyOerationComponent } from './Pages/faculty-oeration/faculty-oeration.component';
 import { LoginComponent } from './Pages/Authentication/login/login.component';
-import { ShowAllUsersComponent } from './Pages/Authentication/show-all-users/show-all-users.component'
+import { ShowAllUsersComponent } from './Pages/Authentication/show-all-users/show-all-users.component';
+import { AddNewsComponent } from './Pages/Authentication/add-news/add-news.component';
+import { HeaderComponent } from './shared/header/header.component'
+import { UserInterceptor } from './providers/user.interceptor';
+import { ProfileComponent } from './Pages/Authentication/profile/profile.component';
 
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent, FooterComponent, RegisterComponent, FacultyOerationComponent, LoginComponent, ShowAllUsersComponent],
+  declarations: [AppComponent, SidebarComponent, FooterComponent, RegisterComponent, FacultyOerationComponent, LoginComponent, ShowAllUsersComponent, AddNewsComponent, HeaderComponent, ProfileComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,9 +37,13 @@ import { ShowAllUsersComponent } from './Pages/Authentication/show-all-users/sho
     MatDividerModule,
     MatMenuModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:UserInterceptor, multi:true}
+    
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

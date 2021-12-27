@@ -6,10 +6,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ShowAllUsersService {
+  public isAuth = false
+  public userData: any = null
 
   constructor(private _http:HttpClient) { }
 
   getUsers():Observable<any>{
     return this._http.get('http://localhost:3000/Sadmin/AllUsers')
+  }
+
+  getSingleUser():Observable<any>{
+    return this._http.get('http://localhost:3000/Sadmin/profile')
   }
 }

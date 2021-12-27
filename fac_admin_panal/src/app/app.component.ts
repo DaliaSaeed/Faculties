@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { ShowAllUsersService } from './services/showAllUsers/show-all-users.service';
 
 
 @Component({
@@ -8,6 +9,6 @@ import { Component} from '@angular/core';
 })
 export class AppComponent {
   
-  constructor() {}
+  constructor(public _auth:ShowAllUsersService) {}
   
 }

@@ -6,8 +6,8 @@ class Admin{
         try {
             const news = await new newsModel({
                 ...req.body,
-               owner: req.user._id,
-               img: req.file.filename
+              // owner: req.user._id,
+               image: req.files
             })
             await news.save()
             res.status(200).send({
@@ -77,6 +77,10 @@ class Admin{
                 message: e.message,
             })
         }
+    }
+
+    static profile =async(req,res)=>{
+        res.send(req.user)
     }
 
     static logOut = async (req, res) => {
