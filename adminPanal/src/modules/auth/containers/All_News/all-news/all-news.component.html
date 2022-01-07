@@ -1,0 +1,21 @@
+<sb-layout-dashboard>
+    <sb-dashboard-head title="AllNews" [hideBreadcrumbs]="false"> </sb-dashboard-head>
+    <section class="container my-3">
+        <div class="row" *ngIf="isLoaded">
+            <div *ngFor="let p of News; let i=index" class="card col-3 mx-3 mb-3">
+                <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Book.svg/1200px-Book.svg.png" class="card-img-top"> -->
+                <div class="card-body">
+                    <h5 class="card-title">{{p.title}}</h5>
+                    <p class="card-text">{{p.content}}</p>
+                </div>
+                <!-- <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Avilable: {{p.quantity}}</li>
+                </ul> -->
+                <div class="card-body">
+                    <a routerLink="/auth/editNew/{{p._id}}" class="btn btn-primary">Edit</a>
+                    <a class="btn btn-danger mx-3" (click)="deleteProduct(p._id, i)">delete</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</sb-layout-dashboard>

@@ -1,0 +1,60 @@
+<nav class="sb-sidenav accordion" id="sidenavAccordion" [ngClass]="sidenavStyle">
+    <div class="sb-sidenav-menu">
+        <div class="nav">
+            <ng-container 
+                ><div class="sb-sidenav-menu-heading" ></div>
+                <ng-container>
+                  
+                         <ul style="list-style-type: circle;">
+                          <img class="avatar" src ="../../../../assets/img/admin.jpg">
+                          <h4 class="name">{{this._auth.myData.fname}} {{this._auth.myData.lname}}</h4>
+                          <p class="designation">{{this._auth.myData.role}}</p>
+                          <div class="mat-divider"></div>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" routerLink="/dashboard">Dashboard</a>
+                          </li>
+                          
+                          <!-- start Admin Auth -->
+                         <span *ngIf="this._auth.myData.role=='admin'">
+                           <li class="nav-item">
+                               <a class="nav-link" routerLink="/auth/register">Register</a>
+                             </li> 
+                             <li class="nav-item">
+                               <a class="nav-link" routerLink="/auth/addFineArtNews">Add Fine Art New</a>
+                             </li>
+                             <li class="nav-item">
+                               <a class="nav-link" routerLink="/auth/addFciNews">Add Fci New</a>
+                             </li>
+                             <li class="nav-item">
+                               <a class="nav-link" routerLink="/auth/addToursimNews">Add Toursim New</a>
+                             </li>
+                        </span>
+                        <!-- End Admin Auth -->
+
+                        <!-- start Fine Art Auth -->
+                        <li class="nav-item" *ngIf="this._auth.myData.role=='Fine_Art_user'">
+                          <a class="nav-link" routerLink="/auth/addFineArtNews">Add New</a>
+                        </li>
+                       <!-- End Fine Art Auth -->
+
+                       <!-- start Toursim Auth -->
+                       <li class="nav-item" *ngIf="this._auth.myData.role=='toursim_user'">
+                          <a class="nav-link" routerLink="/auth/addToursimNews">Add New</a>
+                        </li>
+                       <!-- End Toursim Auth -->
+
+                      <!-- start Fci Auth -->
+                      <li class="nav-item" *ngIf="this._auth.myData.role=='fci_user'">
+                          <a class="nav-link" routerLink="/auth/addFciNews">Add New</a>
+                        </li>
+                      <!-- End Fci Auth -->
+                      </ul>
+                    </ng-container
+            ></ng-container>
+        </div>
+    </div>
+    <div class="sb-sidenav-footer">
+        <div class="small">Logged in as:</div>
+        <span >{{this._auth.myData?.fname}} {{this._auth.myData?.lname}}</span>
+    </div>
+</nav>

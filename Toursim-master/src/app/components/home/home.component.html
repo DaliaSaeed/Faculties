@@ -1,0 +1,180 @@
+<app-header></app-header>
+
+<!-- start section carousel -->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li
+      data-target="#carouselExampleCaptions"
+      data-slide-to="0"
+      class="active"
+    ></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <!-- start slider1-->
+    <div class="carousel-item active">
+      <div class="overlay"></div>
+      <img
+        src="assets/photo/slider1.png"
+        class="d-block w-100 sliderimg"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <div class="row">
+          <div class="col-md-6">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Slider2-->
+
+
+   <!--Start Slider2-->
+    <div class="carousel-item">
+      <div class="overlay"></div>
+      <img
+        src="assets/photo/slider2.png"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <div class="row">
+          <div class="col-md-6">
+
+          </div>
+          <div class="col-md-6">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--End Slider2-->
+
+
+  <!--Start Slider3-->
+  <div class="carousel-item">
+    <div class="overlay"></div>
+    <img
+      src="assets/photo/slider3.jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--End Slider3-->
+
+
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleCaptions"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleCaptions"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- end section carousel -->
+
+
+<!--start statistics -->
+
+<div class="stats text-center">
+  <div class="state">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-xs-12 text-center data">
+          <i class="fa fa-users fa-5x i"></i>
+          <h6>اكثر من</h6>
+          <!-- <h3 class="timer">1</h3> -->
+          <h3 class="timer">{{ student_num }}</h3>
+          <!-- <h3>{{student_num}}</h3> -->
+          <h4>عدد طلاب الجامعة</h4>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12 text-center data">
+          <i class="fa fa-user fa-5x i"></i>
+          <h6>اكثر من</h6>
+          <h3 class="timer1" id="student">{{ student_num }}</h3>
+          <!-- <h3>{{ student_num }}</h3> -->
+          <!-- <h3 class="timer1">{{counter.employee_num}}</h3> -->
+          <h4>عدد أعضاء هيئة التدريس</h4>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12 text-center data">
+          <i class="fa fa-graduation-cap fa-5x i"></i>
+          <h6>اكثر من</h6>
+          <!-- <h3 class="timer2">{{counter.instructors_num}}</h3> -->
+          <h3 class="timer2">{{ employee_num }}</h3>
+          <!-- <h3>{{ employee_num }}</h3> -->
+          <h4>عدد طلاب الدراسات العليا</h4>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12 text-center data">
+          <i class="fa fa-id-card fa-5x i"></i>
+          <h6>اكثر من</h6>
+          <h3 class="timer3">0</h3>
+          <!-- <h3 class="timer3">{{ instructors_num }}</h3> -->
+          <h4>عدد العاملين بالكادر العام</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end statistics -->
+
+<!-- start section contact-->
+
+<app-view-all-news></app-view-all-news>
+
+<!-- end section contact-->
+
+<div class="contact" style="background-color: #f7f7f7; margin-top: 90px; color:#504343;">
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row" style="text-align: center;">
+      <div class="col-md-4">
+        <h2>رؤيه الكليه</h2>
+        <p>تسعى كلية الفنون الجميلة أن تصبح واحدة من الكليات الحكومية المتميزة في نشر التعليم والثقافة والبحث العلمي ومصادر المعرفة والسعي قدماً في تأكيد خدمتها للمجتمع مؤكدة بذلك دورها في تنمية المجتمع المدني، وذلك من خلال التأكيد والتدعيم بمقومات الجودة العالية من منظور عالمي.</p>
+      </div>
+      <div class="col-md-4">
+        <h2>رساله الكليه</h2>
+        <p>تسعى كلية الفنون الجميلة للتأكيد على الدور المجتمعي والمدني للمؤسسات التعليمية وذلك من خلال نشر الثقافة الرفيعة للفنون في مجتمعنا المحلى لرفع سقف التذوق الجمالي إلى الدرجة المطلوبة لتحسين البيئة الجمالية في المجتمع ... الأمر الذي ينعكس بدوره على تحسين أداء الفرد في معظم الأنشطة الإنسانية. تؤكد الكلية على ضرورة التنوع الفكري والثقافي في إثراء حركة الفن والثقافة على المستوى الإقليمي والعالمي الأمر الذي ينعكس ايجابيا على التجربة الإنسانية. </p>
+      </div>
+      <div class="col-md-4" style="text-align: right;">
+        <h2>اهداف الكلية الاستراتيجية</h2>
+        <p>
+          توفير أفضل فرص التعليم والسبل والوسائل البحثية للطلاب وأعضاء هيئة التدريس وذلك بمستوي من الجودة يتوازى مع المعايير الإقليمية والدولية.<br><br>
+          توفير مناخ تعليمي يقوم علي البحث العلمي وحرية الإبداع الفني يشجع الطلاب على بذل أقصى جهدهم في التعلم وتحفيز طاقاتهم الإبداعية لاكتشاف أقصى ما لديهم من إمكانات ومهارات إبداعية<br><br>
+          إعداد خريجين ذوي خبرات تقنية وفكرية وثقافية تؤهلهم للتكيف مع الظروف المتغيرة<br><br>
+          تفعيل دور الفن والجمال ليسهم في تحسين القوي البشرية بما يحيطها من بيئة ثقافية ومرئية بالمجتمع المصري ومحافظة الأقصر علي وجه الخصوص<br>
+        </p>
+      </div>
+    </div>
+  </div> 
+</div>
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

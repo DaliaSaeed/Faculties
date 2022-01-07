@@ -1,0 +1,15 @@
+<sb-layout-dashboard>
+    <sb-dashboard-head title="EditNew" [hideBreadcrumbs]="false"> </sb-dashboard-head>
+    <section class="container my-5">
+        <form [formGroup]="editNewForm" (submit)="editNew()">
+            <div class="mb-3">
+              <input type="text" class="form-control" formControlName="title" placeholder="Title">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" formControlName="content" placeholder="Content">
+            </div>
+            <button class="btn btn-primary" >Submit</button>
+          </form>
+    </section>
+    
+</sb-layout-dashboard>

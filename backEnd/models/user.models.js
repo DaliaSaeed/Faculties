@@ -50,7 +50,7 @@ const userSchema = mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ['Fci_admin', 'SAdmin'],
+        enum: ['fci_user','toursim_user','Fine_Art_user', 'admin'],
         required: [true, "You Must Choose The Role Of The User"]
     },
     image:{

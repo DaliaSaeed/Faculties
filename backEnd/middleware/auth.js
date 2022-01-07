@@ -8,7 +8,7 @@ const auth = (type) => {
                 const decodedToken = jwt.verify(token, 'admin')
                 const user = await userModel.findOne({_id: decodedToken._id,'tokens.token': token})
                 if(!user) throw new Error()
-                if(user.role!=type) throw new Error(`You Are Not ${type}`)
+                if(user.role!=type && type !='general') throw new Error(`You Are Not ${type}`)
                 req.token = token
                 req.user = user
                 next()

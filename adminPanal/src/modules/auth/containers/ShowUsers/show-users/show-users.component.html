@@ -1,0 +1,24 @@
+<sb-layout-dashboard>
+    <sb-dashboard-head title="Show All Users" [hideBreadcrumbs]="false"> </sb-dashboard-head>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of usersData?.data; let i= index">
+            {{user._id}}
+            <th scope="row">{{user._id}}</th>
+            <td>{{user?.fname}} {{user.lname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.role}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</sb-layout-dashboard>

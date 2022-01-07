@@ -8,11 +8,13 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-const Fci_adminRouter = require("../routes/Fci_admin.routes")
-app.use("/Fci_admin", Fci_adminRouter)
+const userRouter = require("../routes/user.routes")
+app.use("/user", userRouter)
 
-const superAdminRouter = require("../routes/superAdmin.routes")
-app.use("/Sadmin", superAdminRouter)
+const adminRouter = require("../routes/admin.routes")
+app.use("/admin", adminRouter)
 
+const generalRouter = require("../routes/general.routes")
+app.use("/general", generalRouter)
 app.use(cors())
 module.exports = app

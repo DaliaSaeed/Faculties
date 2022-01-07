@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+
+<!-- start section breadcrumb -->
+
+<div class="breadcrumb-top">
+    <div class="overlay"></div>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="">الرئيسية</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0);"> أخبار الكليه</a></li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- end section breadcrumb -->
+
+<!-- start section artical university president -->
+
+<div class="system-message">
+    <div class="container">
+        <div class="message-title mb-5">
+            <h2>
+                 أخبار الكليه
+            </h2>
+        </div>
+        <section class="container my-4">
+            <div class="row" style="text-align: right;">
+                <article class="col-md-4 col-12" *ngFor="let new of allNews?.data">
+                    <div class="card mb-5">
+                        <img src="../../../../../assets/photo/slider1.png" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">{{new.title}}</h5>
+                            <p class="card-text" style="color: #504343;">{{new.content}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">{{new.createdAt}}</small>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- end section artical university president -->
+
+<!-- start section university social media  -->
+
+<!-- end section university social media  -->
+
+<div class="container">
+    <div class="driv"></div>
+</div>
+
+
+
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>
+
