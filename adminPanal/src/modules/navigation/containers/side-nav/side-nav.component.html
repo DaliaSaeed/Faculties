@@ -5,49 +5,56 @@
                 ><div class="sb-sidenav-menu-heading" ></div>
                 <ng-container>
                   
-                         <ul style="list-style-type: circle;">
+                         <ul style="list-style-type: none;">
                           <img class="avatar" src ="../../../../assets/img/admin.jpg">
                           <h4 class="name">{{this._auth.myData.fname}} {{this._auth.myData.lname}}</h4>
                           <p class="designation">{{this._auth.myData.role}}</p>
                           <div class="mat-divider"></div>
-                          <li class="nav-item">
+                          <li class="menu-button">
+                            <fa-icon class="icon" [icon]='["fas", "tachometer-alt"]'></fa-icon>
                             <a class="nav-link active" aria-current="page" routerLink="/dashboard">Dashboard</a>
                           </li>
                           
                           <!-- start Admin Auth -->
                          <span *ngIf="this._auth.myData.role=='admin'">
-                           <li class="nav-item">
+                           <li class="menu-button">
+                            <fa-icon class="icon" [icon]='["fas", "user"]'></fa-icon>
                                <a class="nav-link" routerLink="/auth/register">Register</a>
                              </li> 
-                             <li class="nav-item">
-                               <a class="nav-link" routerLink="/auth/addFineArtNews">Add Fine Art New</a>
-                             </li>
-                             <li class="nav-item">
-                               <a class="nav-link" routerLink="/auth/addFciNews">Add Fci New</a>
-                             </li>
-                             <li class="nav-item">
-                               <a class="nav-link" routerLink="/auth/addToursimNews">Add Toursim New</a>
-                             </li>
+                             <li class="menu-button">
+                              <fa-icon class="icon" [icon]='["fas", "table"]'></fa-icon>
+                              <a class="nav-link" routerLink="/auth/showUsers">All Users</a>
+                            </li> 
                         </span>
                         <!-- End Admin Auth -->
 
                         <!-- start Fine Art Auth -->
-                        <li class="nav-item" *ngIf="this._auth.myData.role=='Fine_Art_user'">
-                          <a class="nav-link" routerLink="/auth/addFineArtNews">Add New</a>
+                        <li class="menu-button" *ngIf="this._auth.myData.role=='Fine_Art_user' || this._auth.myData.role=='admin'">
+                          <fa-icon class="icon" [icon]='["fas", "book-open"]'></fa-icon>
+                          <a class="nav-link" routerLink="/auth/addFineArtNews">Add Fine_Art New</a>
                         </li>
                        <!-- End Fine Art Auth -->
 
                        <!-- start Toursim Auth -->
-                       <li class="nav-item" *ngIf="this._auth.myData.role=='toursim_user'">
-                          <a class="nav-link" routerLink="/auth/addToursimNews">Add New</a>
+                       <li class="menu-button" *ngIf="this._auth.myData.role=='toursim_user' || this._auth.myData.role=='admin'">
+                        <fa-icon class="icon" [icon]='["fas", "book-open"]'></fa-icon>
+                        <a class="nav-link" routerLink="/auth/addToursimNews">Add Toursim New</a>
                         </li>
                        <!-- End Toursim Auth -->
 
                       <!-- start Fci Auth -->
-                      <li class="nav-item" *ngIf="this._auth.myData.role=='fci_user'">
-                          <a class="nav-link" routerLink="/auth/addFciNews">Add New</a>
+                      <li class="menu-button" *ngIf="this._auth.myData.role=='fci_user' || this._auth.myData.role=='admin'">
+                        <fa-icon class="icon" [icon]='["fas", "book-open"]'></fa-icon> 
+                        <a class="nav-link" routerLink="/auth/addFciNews">Add Fci New</a>
                         </li>
                       <!-- End Fci Auth -->
+
+                      <!-- start Archaeology Auth -->
+                      <li class="menu-button" *ngIf="this._auth.myData.role=='archaeology_user' || this._auth.myData.role=='admin'">
+                        <fa-icon class="icon" [icon]='["fas", "book-open"]'></fa-icon> 
+                        <a class="nav-link" routerLink="/auth/addArchaeologyNews">Add Archaeology New</a>
+                        </li>
+                      <!-- End Archaeology Auth -->
                       </ul>
                     </ng-container
             ></ng-container>

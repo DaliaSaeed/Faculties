@@ -10,6 +10,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { FacultydepartmentsComponent } from './components/about/info/facultydepartments/facultydepartments/facultydepartments.component';
 import { FacultysystemComponent } from './components/about/info/facultysystemm/facultysystem/facultysystem.component';
+import { CarvingComponent } from './components/about/department/carving/carving/carving.component';
+import { DecorationComponent } from './components/about/department/Decoration/decoration/decoration.component';
+import { GraphicComponent } from './components/about/department/Graphica/graphic/graphic.component';
+import { PhotographyComponent } from './components/about/department/photography/photography/photography.component';
+import { StudentsUnionComponent } from './components/about/info/Students_Union/students-union/students-union.component';
+import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
+import { StudentGuideComponent } from './components/about/info/Student_Guide/student-guide/student-guide.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about/site-map', component: SiteMapComponent },
@@ -39,6 +46,34 @@ const routes: Routes = [
   {
     path: 'about/info/faculty-departments',
     component: FacultydepartmentsComponent ,
+  },
+  {
+    path: 'carving-department',
+    component: CarvingComponent ,
+  },
+  {
+    path: 'decoration-department',
+    component: DecorationComponent ,
+  },
+  {
+    path: 'graphic-department',
+    component: GraphicComponent ,
+  },
+  {
+    path: 'photography-department',
+    component: PhotographyComponent ,
+  },
+  {
+    path: 'Union-students',
+    component: StudentsUnionComponent ,
+  },
+  {
+    path: 'collage-News',
+    component: CollageNewsComponent ,
+  },
+  {
+    path: 'Student-Guide',
+    component:StudentGuideComponent ,
   },
  ];
 

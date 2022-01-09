@@ -9,12 +9,12 @@ import { ShowNewsService } from 'src/app/services/showNews/show-news.service';
 export class CollageNewsComponent implements OnInit {
   allNews:any = []
 
-  constructor(private _global:ShowNewsService) { }
-
+  constructor(public _global:ShowNewsService) { }
   ngOnInit(): void {
     this._global.getNewsData().subscribe(data=>{
       console.log(data)
       this.allNews = data
+      
     })
   }
 

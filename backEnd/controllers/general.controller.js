@@ -2,6 +2,7 @@ const userModel = require("../models/user.models")
 const fciNewsModel = require('../models/fci_news.model')
 const FineArtNewsModel = require('../models/Fine_Art.model')
 const toursimNewsModel = require('../models/toursim_news.model')
+const archaeologyNewsModel = require('../models/toursim_news.model')
 const newstModel = require('../models/news.models')
 
 
@@ -52,6 +53,27 @@ class General  {
     static addToursimNews = async (req, res)=> {
         try {
             const news = await new toursimNewsModel({
+                ...req.body,
+              // owner: req.user._id,
+               image: req.files
+            })
+            await news.save()
+            res.status(200).send({
+                apiStatus: true,
+                message: 'Succesfully Added',
+                data: news
+            })
+        } catch (e) {
+            res.status(500).send({
+                apiStatus: false,
+                data: e.message,
+                message: " Error in adding News"
+            })
+        }
+    }
+    static addArchaeologyNews = async (req, res)=> {
+        try {
+            const news = await new archaeologyNewsModel({
                 ...req.body,
               // owner: req.user._id,
                image: req.files
@@ -132,10 +154,9 @@ class General  {
             })
         }
     }
-    
-    static showNews = async (req, res) => {
+    static showArchaeologyNews = async (req, res) => {
         try {
-            const news = await newstModel.find()
+            const news = await archaeologyNewsModel.find()
             res.status(200).send({
                 apiStatus: true,
                 message: 'Successfuly Fetched', 
@@ -148,6 +169,8 @@ class General  {
             })
         }
     }
+    
+
 
     static updateNew = async (req, res) => {
         try {

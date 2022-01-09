@@ -2,19 +2,24 @@
 
 <!-- start section news-->
 <div class="container contact">
-  
-  <div class="card-deck" style="text-align: right;">
-    <div class="card"  *ngFor="let new of allNews?.data | slice:-3">
-      <img class="card-img-top" src="../../../../../assets/photo/slider1.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{new.title}}</h5>
-        <p class="card-text"> {{new.content}}</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">{{new.createdAt}}</small>
+  <span class="alert alert-danger" *ngIf="allNews?.data.length==0; else Data">
+    No News Yet
+  </span>
+  <ng-template #Data>
+    <div class="card-deck" style="text-align: right;">
+      <div class="card"  *ngFor="let new of allNews?.data | slice:-3">
+        <img class="card-img-top" src="../../../../../assets/photo/slider1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{new.title}}</h5>
+          <p class="card-text"> {{new.content}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{new.createdAt}}</small>
+        </div>
       </div>
     </div>
-  </div>
+
+  </ng-template>
 </div>
 
 <!-- end section news-->

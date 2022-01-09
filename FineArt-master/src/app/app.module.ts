@@ -43,6 +43,13 @@ import { FacultyhistoryComponent } from './components/about/info/facultyhistory/
 import { FacultydepartmentsComponent } from './components/about/info/facultydepartments/facultydepartments/facultydepartments.component';
 import { FacultysystemComponent } from './components/about/info/facultysystemm/facultysystem/facultysystem.component';
 import { ViewAllNewsComponent } from './components/view-all-news/view-all-news.component';
+import { PhotographyComponent } from './components/about/department/photography/photography/photography.component';
+import { GraphicComponent } from './components/about/department/Graphica/graphic/graphic.component';
+import { DecorationComponent } from './components/about/department/Decoration/decoration/decoration.component';
+import { CarvingComponent } from './components/about/department/carving/carving/carving.component';
+import { StudentsUnionComponent } from './components/about/info/Students_Union/students-union/students-union.component';
+import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
+import { StudentGuideComponent } from './components/about/info/Student_Guide/student-guide/student-guide.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -89,7 +96,14 @@ import { ViewAllNewsComponent } from './components/view-all-news/view-all-news.c
     ConnectComponent,
     FacultyhistoryComponent,
     FacultydepartmentsComponent,
-    FacultysystemComponent
+    FacultysystemComponent,
+    PhotographyComponent,
+    GraphicComponent,
+    DecorationComponent,
+    CarvingComponent,
+    StudentsUnionComponent,
+    CollageNewsComponent,
+    StudentGuideComponent,
   ],
   imports: [
     BrowserModule,

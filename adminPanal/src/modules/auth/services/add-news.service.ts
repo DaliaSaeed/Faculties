@@ -22,6 +22,9 @@ export class AddNewsService {
   addFineArtNews(data:any): Observable<any>{
     return this._http.post('http://localhost:3000/general/addFineArtNews', data)
   }
+  addArchaeologyNews(data:any): Observable<any>{
+    return this._http.post('http://localhost:3000/general/addArchaeologyNews', data)
+  }
   showNews():Observable<any>{
     return this._http.get('http://localhost:3000/general/showNews')
   }

@@ -27,6 +27,7 @@ import { EditNewComponent } from './containers/editNew/edit-new/edit-new.compone
 import { AddFciNewsComponent } from './containers/addFciNews/add-fci-news/add-fci-news.component';
 import { AddFineArtNewsComponent } from './containers/addFineArtNews/add-fine-art-news/add-fine-art-news.component';
 import { AddToursimNewsComponent } from './containers/addToursimNews/add-toursim-news/add-toursim-news.component';
+import { AddArchaeologyNewsComponent } from './containers/addArchaeologyNews/add-archaeology-news/add-archaeology-news.component';
 
 @NgModule({
     imports: [
@@ -38,7 +39,7 @@ import { AddToursimNewsComponent } from './containers/addToursimNews/add-toursim
         NavigationModule,
     ],
     providers: [...authServices.services, ...authGuards.guards],
-    declarations: [...authContainers.containers, ...authComponents.components, AddNewsComponent, ProfileComponent, ShowUsersComponent, AllNewsComponent, EditNewComponent, AddFciNewsComponent, AddFineArtNewsComponent, AddToursimNewsComponent],
+    declarations: [...authContainers.containers, ...authComponents.components, AddNewsComponent, ProfileComponent, ShowUsersComponent, AllNewsComponent, EditNewComponent, AddFciNewsComponent, AddFineArtNewsComponent, AddToursimNewsComponent, AddArchaeologyNewsComponent],
     exports: [...authContainers.containers, ...authComponents.components],
 })
 export class AuthModule {}

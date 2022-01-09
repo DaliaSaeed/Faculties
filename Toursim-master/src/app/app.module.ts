@@ -43,6 +43,13 @@ import { FacultyhistoryComponent } from './components/about/info/facultyhistory/
 import { FacultydepartmentsComponent } from './components/about/info/facultydepartments/facultydepartments/facultydepartments.component';
 import { FacultysystemComponent } from './components/about/info/facultysystem/facultysystem/facultysystem.component';
 import { ViewAllNewsComponent } from './components/view-all-news/view-all-news.component';
+import { LanguageComponent } from './components/about/info/language/language/language.component';
+import { StudentsUnionComponent } from './components/about/info/students_union/students-union/students-union.component';
+import { TourismStudiesComponent } from './components/about/departments/Tourism_Studies/tourism-studies/tourism-studies.component';
+import { HotelStudiesComponent } from './components/about/departments/Hotel_Studies/hotel-studies/hotel-studies.component';
+import { TourismGuidanceComponent } from './components/about/departments/Tourism_Guidance/tourism-guidance/tourism-guidance.component';
+import { StudentGuideComponent } from './components/about/info/Student_Guide/student-guide/student-guide.component';
+import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -89,7 +96,14 @@ import { ViewAllNewsComponent } from './components/view-all-news/view-all-news.c
     ConnectComponent,
     FacultyhistoryComponent,
     FacultydepartmentsComponent,
-    FacultysystemComponent
+    FacultysystemComponent,
+    LanguageComponent,
+    StudentsUnionComponent,
+    TourismStudiesComponent,
+    HotelStudiesComponent,
+    TourismGuidanceComponent,
+    StudentGuideComponent,
+    CollageNewsComponent,
   ],
   imports: [
     BrowserModule,

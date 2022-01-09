@@ -10,10 +10,12 @@ router.get('/profile', auth('general'), generalController.profile)
 router.post('/addFciNews', auth('general'), upload.array('files'),generalController.addFciNews)
 router.post('/addFineArtNews', auth('general'), upload.array('files'),generalController.addFineArtNews)
 router.post('/addToursimNews', auth('general'), upload.array('files'),generalController.addToursimNews)
+router.post('/addArchaeologyNews', auth('general'), upload.array('files'),generalController.addArchaeologyNews)
 
 router.get('/showFciNews',generalController.showFciNews)
 router.get('/showFineArtNews',generalController.showFineArtNews)
 router.get('/showToursimNews',generalController.showToursimNews)
+router.get('/showArchaeologyNews',generalController.showArchaeologyNews)
 
 router.post('/showSingleNews', auth('general'), generalController.showSingleNew)
 

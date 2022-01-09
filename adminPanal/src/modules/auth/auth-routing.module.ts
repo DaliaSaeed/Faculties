@@ -78,6 +78,14 @@ export const ROUTES: Routes = [
         } as SBRouteData,
     },
     {
+        path: 'addArchaeologyNews',
+        canActivate: [AuthGuard],
+        component: authContainers.AddArchaeologyNewsComponent,
+        data: {
+            title: 'Add News',
+        } as SBRouteData,
+    },
+    {
         path: 'AllNews',
         canActivate: [AuthGuard],
         component: authContainers.AllNewsComponent,
@@ -96,7 +104,7 @@ export const ROUTES: Routes = [
     
     {
         path: 'showUsers',
-        canActivate: [SuperAdminGuardsGuard],
+        canActivate: [AuthGuard],
         component: authContainers.ShowUsersComponent,
         data: {
             title: 'Show All Users',

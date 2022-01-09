@@ -9,6 +9,7 @@ import { EditNewComponent } from './editNew/edit-new/edit-new.component';
 import { AddFciNewsComponent } from './addFciNews/add-fci-news/add-fci-news.component';
 import { AddFineArtNewsComponent } from './addFineArtNews/add-fine-art-news/add-fine-art-news.component';
 import { AddToursimNewsComponent } from './addToursimNews/add-toursim-news/add-toursim-news.component';
+import { AddArchaeologyNewsComponent } from './addArchaeologyNews/add-archaeology-news/add-archaeology-news.component';
 
 export const containers = [
     LoginComponent,
@@ -21,7 +22,8 @@ export const containers = [
        ShowUsersComponent,
        AddFciNewsComponent,
        AddFineArtNewsComponent,
-       AddToursimNewsComponent
+       AddToursimNewsComponent,
+       AddArchaeologyNewsComponent
     ];
 
 export * from './login/login.component';
@@ -35,3 +37,4 @@ export * from './ShowUsers/show-users/show-users.component';
 export * from './addFciNews/add-fci-news/add-fci-news.component';
 export * from './addFineArtNews/add-fine-art-news/add-fine-art-news.component';
 export * from './addToursimNews/add-toursim-news/add-toursim-news.component';
+export * from './addArchaeologyNews/add-archaeology-news/add-archaeology-news.component';
