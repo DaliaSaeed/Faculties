@@ -50,6 +50,7 @@ import { HotelStudiesComponent } from './components/about/departments/Hotel_Stud
 import { TourismGuidanceComponent } from './components/about/departments/Tourism_Guidance/tourism-guidance/tourism-guidance.component';
 import { StudentGuideComponent } from './components/about/info/Student_Guide/student-guide/student-guide.component';
 import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
+import { SingleEventComponent } from './components/single-event/single-event.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -104,6 +105,7 @@ import { CollageNewsComponent } from './components/about/collageNews/collage-new
     TourismGuidanceComponent,
     StudentGuideComponent,
     CollageNewsComponent,
+    SingleEventComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@
 
 
 .navbar-top{
-    background-color: rgb(201 75 100);
+    background-color:  var(--main_color);
     padding: 10px;
     color: var(--icon_color);
     max-height: 43px;

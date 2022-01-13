@@ -50,6 +50,8 @@ import { CarvingComponent } from './components/about/department/carving/carving/
 import { StudentsUnionComponent } from './components/about/info/Students_Union/students-union/students-union.component';
 import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
 import { StudentGuideComponent } from './components/about/info/Student_Guide/student-guide/student-guide.component';
+import { SingleEventComponent } from './components/single-event/single-event.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -104,6 +106,7 @@ import { StudentGuideComponent } from './components/about/info/Student_Guide/stu
     StudentsUnionComponent,
     CollageNewsComponent,
     StudentGuideComponent,
+    SingleEventComponent
   ],
   imports: [
     BrowserModule,

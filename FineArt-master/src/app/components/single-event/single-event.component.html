@@ -3,17 +3,11 @@
 <div class="single">
   <div class="container">
     <div class="content">
-      <div class="photo">
-        <img
-          [src]="
-            'https://universityqwer.000webhostapp.com/images/' + photo
-              | imagePipe: defualtImage
-          "
-          alt="No Phone Image"
-        />
+      <h2 style="text-align: center;">{{Data?.data.title}}</h2>
+        <p class="des">{{Data?.data.content}}</p>
+      <div class="photo" *ngFor="let img of Data?.data.image">
+        <img [src]="apiUrl+img.path"  class="img-thumbnail">
       </div>
-      <div class="date">{{ time | date: "medium"}}</div>
-      <p class="des">{{ des }}</p>
     </div>
   </div>
 </div>

@@ -20,6 +20,9 @@ import { CounselingCenterComponent } from './components/about/units/SpecialUnits
 import { CreditHoursComponent } from './components/about/academiclife/credit-hours/credit-hours.component';
 import { GraduationProjectsComponent } from './components/about/academiclife/graduation-projects/graduation-projects.component';
 import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
+import { StudentsUnionComponent } from './components/about/info/students_Union/students-union/students-union.component';
+import { CollegeListComponent } from './components/about/info/college_list/college-list/college-list.component';
+import { SingleEventComponent } from './components/single-event/single-event.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about/site-map', component: SiteMapComponent },
@@ -49,6 +52,18 @@ const routes: Routes = [
   {
     path: 'about/info/faculty-system',
     component: FacultysystemComponent ,
+  },
+  {
+    path: 'about/info/students-union',
+    component: StudentsUnionComponent ,
+  },
+  {
+    path: 'about/info/college_list',
+    component: CollegeListComponent ,
+  },
+  {
+    path: 'single-event/:id',
+    component: SingleEventComponent ,
   },
   {path: 'about/department/computer-science', component:ComputerScienceComponent},
   {path: 'about/department/information-system', component:InformationSystemsComponent},

@@ -1,6 +1,9 @@
 import { EventService } from '../../services/events/event.service';
 import { Component, OnInit } from '@angular/core';
 import { Event } from './../../interface/events/event';
+import { ShowNewsService } from 'src/app/services/showNews/show-news.service';
+import { environment } from 'src/environments/environment';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-single-event',
@@ -8,23 +11,17 @@ import { Event } from './../../interface/events/event';
   styleUrls: ['./single-event.component.css'],
 })
 export class SingleEventComponent implements OnInit {
-  defualtImage: string;
-  items: Array<Event>;
-  constructor(private singleEvent: EventService) {
-    this.defualtImage = 'https://via.placeholder.com/100';
-  }
-
-  photo: string = '';
-  time: string = '';
-  des: string = '';
+  apiUrl = environment.Url
+  Data:any = []
+  id: any
+  constructor(private _route:ActivatedRoute, private _global:ShowNewsService) { }
 
   ngOnInit(): void {
-
-    this.singleEvent.getEvents().subscribe(data=>{
-      this.items=data
-      this.photo = this.items[this.singleEvent.idOfEvent].image;
-      this.time = this.items[this.singleEvent.idOfEvent].created_at;
-      this.des = this.items[this.singleEvent.idOfEvent].description;
+    this.id = this._route.snapshot.params.id
+    // this.id = this._route.snapshot.paramMap.get("id")
+    // this._route.paramMap.subscribe(params => this.id = params.get("id"))
+    this._global.getToursimSingleNews(this._route.snapshot.params.id).subscribe(data=>{
+      this.Data = data
     })
   }
 }

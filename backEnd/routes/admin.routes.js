@@ -4,7 +4,7 @@ const auth = require('../middleware/auth')
 const upload = require('../middleware/fileUpload')
 
 
-router.post("/register",auth('admin'),upload.single('image'),adminController.register)
+router.post("/register",upload.single('image'),adminController.register)
 router.delete('/deleteSingleNew/:id', auth('admin'), adminController.deleteSingleNew)
 
 router.delete('/delAllFciNews', auth('admin'), adminController.delAllFciNews)

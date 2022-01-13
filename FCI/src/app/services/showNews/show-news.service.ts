@@ -13,7 +13,7 @@ export class ShowNewsService {
     return this._ser.get('http://localhost:3000/general/showFciNews')
   }
 
-  getSingleNews(id:string):Observable<any>{
-    return this._ser.get(`https://jsonplaceholder.typicode.com/photos/${id}`)
+  getFciSingleNews(id:string):Observable<any>{
+    return this._ser.get(`http://localhost:3000/general/showFciSingleNews/${id}`)
   }
 }

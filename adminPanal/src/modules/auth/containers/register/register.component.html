@@ -1,29 +1,83 @@
-<sb-layout-auth
-    ><div class="container">
+<sb-layout-dashboard>
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
                     <div class="card-body">
-                        <form>
+                        <form [formGroup]="registerForm" (ngSubmit)="handleRegister()">
+                            <!-- <div style="color: red; font-size: medium;"
+                            *ngIf="registerForm.valid && isSumitted">
+                                <div>Check Your Data</div>
+                            </div> -->
+                           
                             <div class="form-row">
                                 <div class="col-md-6">
-                                    <div class="form-group"><label class="small mb-1" for="inputFirstName">First Name</label><input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter first name" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputFirstName">First Name</label>
+                                        <input class="form-control py-4" formControlName ="fname" id="inputFirstName" type="text" placeholder="Enter first name" />
+                                    </div>
+                                    <div style="color: red; font-size: medium;"
+                                    *ngIf="fname?.invalid && (isSumitted || fname?.dirty || fname?.touched )">
+                                        <p *ngIf="fname?.errors?.required">* Name is required </p>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group"><label class="small mb-1" for="inputLastName">Last Name</label><input class="form-control py-4" id="inputLastName" type="text" placeholder="Enter last name" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputLastName">Last Name</label>
+                                        <input class="form-control py-4" formControlName ="lname" required id="inputLastName" type="text" placeholder="Enter last name" />
+                                    </div>
+                                    <div style="color: red; font-size: medium;"
+                                    *ngIf="fname?.invalid && (isSumitted || fname?.dirty || fname?.touched )">
+                                        <div *ngIf="fname?.errors?.required">Last Name Is Required</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Email</label><input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" /></div>
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" /></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group"><label class="small mb-1" for="inputConfirmPassword">Confirm Password</label><input class="form-control py-4" id="inputConfirmPassword" type="password" placeholder="Confirm password" /></div>
-                                </div>
+                            <div class="form-group">
+                                <label class="small mb-1" for="inputEmailAddress">Email</label>
+                                <input class="form-control py-4" required  formControlName ="email" (input)="this.emailUsedBefore=false" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" />
+                                <div style="color: red; font-size: medium;"
+                                    *ngIf="fname?.invalid && (isSumitted || fname?.dirty || fname?.touched )">
+                                        <div *ngIf="email?.errors?.required">Email Is Required</div>
+                                    </div>
+                                    <div class="my-3 alert alert-danger" *ngIf="emailUsedBefore">
+                                        <p>* Email used before </p>
+                                    </div>
                             </div>
-                            <div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block" routerLink="/dashboard">Create Account</a></div>
+                           
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="inputPassword">Password</label>
+                                        <input class="form-control py-4" formControlName ="password" required id="inputPassword" type="password" placeholder="Enter password" />
+                                        <div style="color: red; font-size: medium;"
+                                        *ngIf="password?.invalid && (isSumitted || password?.dirty || password?.touched )">
+                                            <div *ngIf="password?.errors?.required">Passward Is Required</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="inputPassword">Phone Number</label>
+                                        <input class="form-control py-4" formControlName ="phone" id="inputPassword" type="password" placeholder="Enter Your Phone Number" />
+                                        <div style="color: red; font-size: medium;"
+                                        *ngIf="phone?.invalid && (isSumitted || phone?.dirty || phone?.touched )">
+                                         <div *ngIf="phone?.errors?.required">Phone Number Is Required</div>
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <select class="form-select" formControlName ="role" >
+                                            <option class="form-select" value="" selected>Open This Select User Type</option>
+                                            <option *ngFor="let role of roles" [ngValue]="role">{{role}}</option>
+                                          </select>
+                                  
+                                          <div style="color: red; font-size: medium;"
+                                          *ngIf="role?.invalid && (isSumitted || role?.dirty || role?.touched )">
+                                           <p *ngIf="role?.errors?.required">* Role is required </p>
+                                         </div>
+                                    </div>
+                                    <div class="input-group mb-3 mt-3">
+                                        <input type="file" class="form-control"  formControlName ="image">
+                                        <label class="input-group-text" for="img">img</label>
+                                      </div>
+                            <div class="form-group mt-4 mb-0">
+                                <button class="btn btn-primary btn-block" [disabled]="registerForm.invalid" type="submit">Create Account</button>
+                            </div>
                         </form>
                     </div>
                     <div class="card-footer text-center">
@@ -32,5 +86,5 @@
                 </div>
             </div>
         </div>
-    </div></sb-layout-auth
+    </div></sb-layout-dashboard
 >

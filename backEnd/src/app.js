@@ -16,5 +16,7 @@ app.use("/admin", adminRouter)
 
 const generalRouter = require("../routes/general.routes")
 app.use("/general", generalRouter)
+
+app.use('/uploads', express.static('uploads'))
 app.use(cors())
 module.exports = app

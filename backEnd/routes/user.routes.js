@@ -7,6 +7,5 @@ router.post('/logout', auth('user'), userController.logOut)
 router.post('/logoutAll', auth('user'), userController.logOutAll)
 
 router.get('/showNews',  userController.showNews)
-router.get('/showSingleNews/:id', auth('user'), userController.showSingleNews)
 
 module.exports = router

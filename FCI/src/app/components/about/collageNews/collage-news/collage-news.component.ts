@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShowNewsService } from 'src/app/services/showNews/show-news.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-collage-news',
@@ -8,6 +9,7 @@ import { ShowNewsService } from 'src/app/services/showNews/show-news.service';
 })
 export class CollageNewsComponent implements OnInit {
   allNews:any = []
+  apiUrl = environment.Url
 
   constructor(public _global:ShowNewsService) { }
   ngOnInit(): void {

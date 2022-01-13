@@ -34,10 +34,11 @@
                 <div class="row" style="text-align: right;">
                     <article class="col-md-4 col-12" *ngFor="let new of allNews?.data">
                         <div class="card mb-5">
-                            <img src="../../../../../assets/photo/slider1.png" class="img-fluid">
+                            <img [src]="apiUrl+new.image[0].path" class="img-fluid">
                             <div class="card-body">
                                 <h5 class="card-title">{{new.title}}</h5>
                                 <p class="card-text" style="color: #504343;">{{new.content}}</p>
+                                <a  routerLink="/single-event/{{new._id}}">قراءه المزيد</a>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">{{new.createdAt}}</small>

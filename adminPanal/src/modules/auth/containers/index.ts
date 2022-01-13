@@ -10,7 +10,7 @@ import { AddFciNewsComponent } from './addFciNews/add-fci-news/add-fci-news.comp
 import { AddFineArtNewsComponent } from './addFineArtNews/add-fine-art-news/add-fine-art-news.component';
 import { AddToursimNewsComponent } from './addToursimNews/add-toursim-news/add-toursim-news.component';
 import { AddArchaeologyNewsComponent } from './addArchaeologyNews/add-archaeology-news/add-archaeology-news.component';
-
+import { AddAlsunNewsComponent } from './addAlsunNews/add-alsun-news/add-alsun-news.component';
 export const containers = [
     LoginComponent,
      RegisterComponent,
@@ -23,7 +23,8 @@ export const containers = [
        AddFciNewsComponent,
        AddFineArtNewsComponent,
        AddToursimNewsComponent,
-       AddArchaeologyNewsComponent
+       AddArchaeologyNewsComponent,
+       AddAlsunNewsComponent
     ];
 
 export * from './login/login.component';
@@ -38,3 +39,4 @@ export * from './addFciNews/add-fci-news/add-fci-news.component';
 export * from './addFineArtNews/add-fine-art-news/add-fine-art-news.component';
 export * from './addToursimNews/add-toursim-news/add-toursim-news.component';
 export * from './addArchaeologyNews/add-archaeology-news/add-archaeology-news.component';
+export *  from './addAlsunNews/add-alsun-news/add-alsun-news.component';

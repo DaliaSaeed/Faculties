@@ -19,6 +19,9 @@ export class AddNewsService {
   addToursimNews(data:any): Observable<any>{
     return this._http.post('http://localhost:3000/general/addToursimNews', data)
   }
+  addAlsunNews(data:any): Observable<any>{
+    return this._http.post('http://localhost:3000/general/addAlsunNews', data)
+  }
   addFineArtNews(data:any): Observable<any>{
     return this._http.post('http://localhost:3000/general/addFineArtNews', data)
   }

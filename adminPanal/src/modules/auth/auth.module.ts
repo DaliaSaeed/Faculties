@@ -28,6 +28,7 @@ import { AddFciNewsComponent } from './containers/addFciNews/add-fci-news/add-fc
 import { AddFineArtNewsComponent } from './containers/addFineArtNews/add-fine-art-news/add-fine-art-news.component';
 import { AddToursimNewsComponent } from './containers/addToursimNews/add-toursim-news/add-toursim-news.component';
 import { AddArchaeologyNewsComponent } from './containers/addArchaeologyNews/add-archaeology-news/add-archaeology-news.component';
+import { AddAlsunNewsComponent } from './containers/addAlsunNews/add-alsun-news/add-alsun-news.component';
 
 @NgModule({
     imports: [
@@ -39,7 +40,7 @@ import { AddArchaeologyNewsComponent } from './containers/addArchaeologyNews/add
         NavigationModule,
     ],
     providers: [...authServices.services, ...authGuards.guards],
-    declarations: [...authContainers.containers, ...authComponents.components, AddNewsComponent, ProfileComponent, ShowUsersComponent, AllNewsComponent, EditNewComponent, AddFciNewsComponent, AddFineArtNewsComponent, AddToursimNewsComponent, AddArchaeologyNewsComponent],
+    declarations: [...authContainers.containers, ...authComponents.components, AddNewsComponent, ProfileComponent, ShowUsersComponent, AllNewsComponent, EditNewComponent, AddFciNewsComponent, AddFineArtNewsComponent, AddToursimNewsComponent, AddArchaeologyNewsComponent, AddAlsunNewsComponent],
     exports: [...authContainers.containers, ...authComponents.components],
 })
 export class AuthModule {}

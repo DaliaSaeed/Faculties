@@ -15,6 +15,8 @@ import { IslamicAntiquitiesComponent } from './components/about/departments/Isla
 import { EgyptionAntiquitiesComponent } from './components/about/departments/Egyption_Antiquities/egyption-antiquities/egyption-antiquities.component';
 import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
 import { StusentGuideComponent } from './components/about/info/stusent_guide/stusent-guide/stusent-guide.component';
+import { StudentsUnionComponent } from './components/about/info/students_union/students-union/students-union.component';
+import { SingleEventComponent } from './components/single-event/single-event.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about/site-map', component: SiteMapComponent },
@@ -48,6 +50,14 @@ const routes: Routes = [
   {
     path: 'about/info/stusent-guid',
     component: StusentGuideComponent ,
+  },
+  {
+    path: 'about/info/students_union',
+    component: StudentsUnionComponent ,
+  },
+  {
+    path: 'single-event/:id',
+    component: SingleEventComponent ,
   },
   {
     path: 'about/departments/Antiquities_Restoration',

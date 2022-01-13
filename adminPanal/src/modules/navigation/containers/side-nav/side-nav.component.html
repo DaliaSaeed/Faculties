@@ -6,7 +6,7 @@
                 <ng-container>
                   
                          <ul style="list-style-type: none;">
-                          <img class="avatar" src ="../../../../assets/img/admin.jpg">
+                          <img class="avatar" src ="../../../../assets/img/admin.png">
                           <h4 class="name">{{this._auth.myData.fname}} {{this._auth.myData.lname}}</h4>
                           <p class="designation">{{this._auth.myData.role}}</p>
                           <div class="mat-divider"></div>
@@ -21,10 +21,10 @@
                             <fa-icon class="icon" [icon]='["fas", "user"]'></fa-icon>
                                <a class="nav-link" routerLink="/auth/register">Register</a>
                              </li> 
-                             <li class="menu-button">
+                             <!-- <li class="menu-button">
                               <fa-icon class="icon" [icon]='["fas", "table"]'></fa-icon>
                               <a class="nav-link" routerLink="/auth/showUsers">All Users</a>
-                            </li> 
+                            </li>  -->
                         </span>
                         <!-- End Admin Auth -->
 
@@ -55,6 +55,13 @@
                         <a class="nav-link" routerLink="/auth/addArchaeologyNews">Add Archaeology New</a>
                         </li>
                       <!-- End Archaeology Auth -->
+
+                      <!-- start Alsun Auth -->
+                      <li class="menu-button" *ngIf="this._auth.myData.role=='alsun_user' || this._auth.myData.role=='admin'">
+                        <fa-icon class="icon" [icon]='["fas", "book-open"]'></fa-icon> 
+                        <a class="nav-link" routerLink="/auth/addAlsunNews">Add Alsun New</a>
+                        </li>
+                      <!-- End Alsun Auth -->
                       </ul>
                     </ng-container
             ></ng-container>

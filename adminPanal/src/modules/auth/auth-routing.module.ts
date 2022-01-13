@@ -78,6 +78,14 @@ export const ROUTES: Routes = [
         } as SBRouteData,
     },
     {
+        path: 'addAlsunNews',
+        canActivate: [AuthGuard],
+        component: authContainers.AddAlsunNewsComponent,
+        data: {
+            title: 'Add News',
+        } as SBRouteData,
+    },
+    {
         path: 'addArchaeologyNews',
         canActivate: [AuthGuard],
         component: authContainers.AddArchaeologyNewsComponent,

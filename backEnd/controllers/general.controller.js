@@ -2,6 +2,7 @@ const userModel = require("../models/user.models")
 const fciNewsModel = require('../models/fci_news.model')
 const FineArtNewsModel = require('../models/Fine_Art.model')
 const toursimNewsModel = require('../models/toursim_news.model')
+const AlsunNewsModel = require('../models/alsun_news.model')
 const archaeologyNewsModel = require('../models/toursim_news.model')
 const newstModel = require('../models/news.models')
 
@@ -53,6 +54,27 @@ class General  {
     static addToursimNews = async (req, res)=> {
         try {
             const news = await new toursimNewsModel({
+                ...req.body,
+              // owner: req.user._id,
+               image: req.files
+            })
+            await news.save()
+            res.status(200).send({
+                apiStatus: true,
+                message: 'Succesfully Added',
+                data: news
+            })
+        } catch (e) {
+            res.status(500).send({
+                apiStatus: false,
+                data: e.message,
+                message: " Error in adding News"
+            })
+        }
+    }
+    static addAlsunNews = async (req, res)=> {
+        try {
+            const news = await new AlsunNewsModel({
                 ...req.body,
               // owner: req.user._id,
                image: req.files
@@ -124,6 +146,25 @@ class General  {
             })
         }
     }
+    static showFciSingleNews =async(req,res)=>{
+        try{
+            const singleNew = await fciNewsModel.findById(req.params.id)
+            if(!singleNew) throw new Error("This New not found")
+            res.send({
+                apiStatus:true,
+                data:singleNew
+            })
+        }
+        catch(e){
+            res.send({
+                apiStatus:false,
+                data:e.message,
+                message:"error loading New data"
+            })
+        }
+    
+    }
+    
     static showFineArtNews = async (req, res) => {
         try {
             const news = await FineArtNewsModel.find()
@@ -138,6 +179,24 @@ class General  {
                 message: e.message,
             })
         }
+    }
+    static showFineArtSingleNews =async(req,res)=>{
+        try{
+            const singleNew = await FineArtNewsModel.findById(req.params.id)
+            if(!singleNew) throw new Error("This New not found")
+            res.send({
+                apiStatus:true,
+                data:singleNew
+            })
+        }
+        catch(e){
+            res.send({
+                apiStatus:false,
+                data:e.message,
+                message:"error loading New data"
+            })
+        }
+    
     }
     static showToursimNews = async (req, res) => {
         try {
@@ -154,6 +213,57 @@ class General  {
             })
         }
     }
+    static showToursimSingleNews =async(req,res)=>{
+        try{
+            const singleNew = await toursimNewsModel.findById(req.params.id)
+            if(!singleNew) throw new Error("This New not found")
+            res.send({
+                apiStatus:true,
+                data:singleNew
+            })
+        }
+        catch(e){
+            res.send({
+                apiStatus:false,
+                data:e.message,
+                message:"error loading New data"
+            })
+        }
+    
+    }
+    static showAlsunNews = async (req, res) => {
+        try {
+            const news = await AlsunNewsModel.find()
+            res.status(200).send({
+                apiStatus: true,
+                message: 'Successfuly Fetched', 
+                data: news
+            })
+        } catch (e) {
+            res.status(500).send({
+                apiStatus: false,
+                message: e.message,
+            })
+        }
+    }
+    static showAlsunSingleNews =async(req,res)=>{
+        try{
+            const singleNew = await AlsunNewsModel.findById(req.params.id)
+            if(!singleNew) throw new Error("This New not found")
+            res.send({
+                apiStatus:true,
+                data:singleNew
+            })
+        }
+        catch(e){
+            res.send({
+                apiStatus:false,
+                data:e.message,
+                message:"error loading New data"
+            })
+        }
+    
+    }
     static showArchaeologyNews = async (req, res) => {
         try {
             const news = await archaeologyNewsModel.find()
@@ -168,6 +278,24 @@ class General  {
                 message: e.message,
             })
         }
+    }
+    static showArchaeologySingleNews =async(req,res)=>{
+        try{
+            const singleNew = await archaeologyNewsModel.findById(req.params.id)
+            if(!singleNew) throw new Error("This New not found")
+            res.send({
+                apiStatus:true,
+                data:singleNew
+            })
+        }
+        catch(e){
+            res.send({
+                apiStatus:false,
+                data:e.message,
+                message:"error loading New data"
+            })
+        }
+    
     }
     
 

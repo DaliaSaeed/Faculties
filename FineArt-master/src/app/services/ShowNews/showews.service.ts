@@ -11,4 +11,7 @@ export class ShowewsService {
   getNewsData(): Observable<any>{
     return this._ser.get('http://localhost:3000/general/showFineArtNews')
   }
+  getFineArtSingleNews(id:string):Observable<any>{
+    return this._ser.get(`http://localhost:3000/general/showFineArtSingleNews/${id}`)
+  }
 }

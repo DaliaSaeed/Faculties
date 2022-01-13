@@ -48,7 +48,8 @@ import { EgyptionAntiquitiesComponent } from './components/about/departments/Egy
 import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
 import { StusentGuideComponent } from './components/about/info/stusent_guide/stusent-guide/stusent-guide.component';
 import { ViewAllNewsComponent } from './components/view-all-news/view-all-news.component';
-
+import { StudentsUnionComponent } from './components/about/info/students_union/students-union/students-union.component';
+import { SingleEventComponent } from './components/single-event/single-event.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -100,7 +101,9 @@ import { ViewAllNewsComponent } from './components/view-all-news/view-all-news.c
     EgyptionAntiquitiesComponent,
     CollageNewsComponent,
     StusentGuideComponent,
-    ViewAllNewsComponent
+    ViewAllNewsComponent,
+    StudentsUnionComponent,
+    SingleEventComponent
   ],
   imports: [
     BrowserModule,

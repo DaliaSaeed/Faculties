@@ -24,25 +24,6 @@ class Admin{
         }
     }
 
-    static showSingleNews =async(req,res)=>{
-        try{
-            const singleNew = await newsModel.findById(req.params.id)
-            if(!singleNew) throw new Error("This New not found")
-            res.send({
-                apiStatus:true,
-                data:singleNew
-            })
-        }
-        catch(e){
-            res.send({
-                apiStatus:false,
-                data:e.message,
-                message:"error loading New data"
-            })
-        }
-    
-    }
-
     // Authentication and LogIn
     static logOut = async (req, res) => {
         try {

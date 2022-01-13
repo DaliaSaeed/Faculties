@@ -56,6 +56,9 @@ import { AboutTheQualityComponent } from './components/about/units/QualityAssura
 import { OrganizationalChartComponent } from './components/about/units/QualityAssuranceUnit/organizational-chart/organizational-chart.component';
 import { CounselingCenterComponent } from './components/about/units/SpecialUnits/counseling-center/counseling-center.component';
 import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
+import { StudentsUnionComponent } from './components/about/info/students_Union/students-union/students-union.component';
+import { CollegeListComponent } from './components/about/info/college_list/college-list/college-list.component';
+import { SingleEventComponent } from './components/single-event/single-event.component';
 
 @NgModule({
   declarations: [
@@ -113,7 +116,10 @@ import { CollageNewsComponent } from './components/about/collageNews/collage-new
     AboutTheQualityComponent,
     OrganizationalChartComponent,
     CounselingCenterComponent,
-    CollageNewsComponent
+    CollageNewsComponent,
+    StudentsUnionComponent,
+    CollegeListComponent,
+    SingleEventComponent
   ],
   imports: [
     BrowserModule,

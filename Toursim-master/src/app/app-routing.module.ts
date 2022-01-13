@@ -16,6 +16,8 @@ import { HotelStudiesComponent } from './components/about/departments/Hotel_Stud
 import { TourismStudiesComponent } from './components/about/departments/Tourism_Studies/tourism-studies/tourism-studies.component';
 import { TourismGuidanceComponent } from './components/about/departments/Tourism_Guidance/tourism-guidance/tourism-guidance.component';
 import { LanguageComponent } from './components/about/info/language/language/language.component';
+import { StudentsUnionComponent } from './components/about/info/students_union/students-union/students-union.component';
+import { SingleEventComponent } from './components/single-event/single-event.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about/site-map', component: SiteMapComponent },
@@ -57,6 +59,14 @@ const routes: Routes = [
   {
     path: 'about/info/student-guide',
     component: StudentGuideComponent ,
+  },
+  {
+    path: 'single-event/:id',
+    component: SingleEventComponent ,
+  },
+  {
+    path: 'about/info/student-union',
+    component: StudentsUnionComponent ,
   },
   {
     path: 'about/departments/hotel_Studies',

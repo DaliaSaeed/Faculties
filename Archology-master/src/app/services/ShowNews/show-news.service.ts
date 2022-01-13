@@ -12,4 +12,8 @@ export class ShowNewsService {
   getNewsData(): Observable<any>{
     return this._ser.get('http://localhost:3000/general/showArchaeologyNews')
   }
+
+  getArchaeologySingleNews(id:string):Observable<any>{
+    return this._ser.get(`http://localhost:3000/general/showArchaeologySingleNews/${id}`)
+  }
 }
