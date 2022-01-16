@@ -20,6 +20,7 @@ import { ItaliyComponent } from './components/about/departments/italiy/italiy/it
 import { RochineComponent } from './components/about/departments/rochine/rochine/rochine.component';
 import { SpainshComponent } from './components/about/departments/spainsh/spainsh/spainsh.component';
 import { SingleEventComponent } from './components/single-event/single-event.component';
+import { CommitteeListsComponent } from './components/about/info/Committee_Lists/committee-lists/committee-lists.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about/site-map', component: SiteMapComponent },
@@ -89,6 +90,10 @@ const routes: Routes = [
   {
     path: 'collageNews',
     component: CollageNewsComponent ,
+  },
+  {
+    path: 'Committee_Lists',
+    component: CommitteeListsComponent ,
   },
  ];
 

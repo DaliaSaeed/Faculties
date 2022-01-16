@@ -51,6 +51,7 @@ import { StudentsUnionComponent } from './components/about/info/Students_Union/s
 import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
 import { StudentGuideComponent } from './components/about/info/Student_Guide/student-guide/student-guide.component';
 import { SingleEventComponent } from './components/single-event/single-event.component';
+import { CommitteeListsComponent } from './components/about/info/Committee_Lists/committee-lists/committee-lists.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { SingleEventComponent } from './components/single-event/single-event.com
     StudentsUnionComponent,
     CollageNewsComponent,
     StudentGuideComponent,
-    SingleEventComponent
+    SingleEventComponent,
+    CommitteeListsComponent
   ],
   imports: [
     BrowserModule,

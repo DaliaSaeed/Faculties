@@ -18,6 +18,7 @@ import { StudentsUnionComponent } from './components/about/info/Students_Union/s
 import { CollageNewsComponent } from './components/about/collageNews/collage-news/collage-news.component';
 import { StudentGuideComponent } from './components/about/info/Student_Guide/student-guide/student-guide.component';
 import { SingleEventComponent } from './components/single-event/single-event.component';
+import { CommitteeListsComponent } from './components/about/info/Committee_Lists/committee-lists/committee-lists.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about/site-map', component: SiteMapComponent },
@@ -75,6 +76,10 @@ const routes: Routes = [
   {
     path: 'Student-Guide',
     component:StudentGuideComponent ,
+  },
+  {
+    path: 'Committee_Lists',
+    component: CommitteeListsComponent ,
   },
   {
     path: 'single-event/:id',
