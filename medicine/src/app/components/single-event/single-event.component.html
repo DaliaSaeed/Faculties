@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<div class="single">
+  <div class="container">
+    <div class="content">
+      <h2 style="text-align: center;">{{Data?.data.title}}</h2>
+        <p class="des">{{Data?.data.content}}</p>
+      <div class="photo" *ngFor="let img of Data?.data.image">
+        <img [src]="apiUrl+img.path"  class="img-thumbnail">
+      </div>
+    </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

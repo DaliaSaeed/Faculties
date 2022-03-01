@@ -1,0 +1,32 @@
+
+
+<!-- start section news-->
+<div class="container contact">
+  <span class="alert alert-danger" *ngIf="allNews?.data.length==0; else Data">
+    No News Yet
+  </span>
+  <ng-template #Data>
+    <div class="card-deck" style="text-align: right;">
+      <div class="card"  *ngFor="let new of allNews?.data | slice:-3">
+        <img class="card-img-top" [src]="apiUrl+new.image[0].path" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{new.title}}</h5>
+          <p class="card-text"> {{new.content}}</p>
+          <a  routerLink="/single-event/{{new._id}}">قراءه المزيد</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{new.createdAt}}</small>
+        </div>
+      </div>
+    </div>
+
+  </ng-template>
+</div>
+
+
+
+
+
+<!-- end section news-->
+
+<app-scroll></app-scroll>

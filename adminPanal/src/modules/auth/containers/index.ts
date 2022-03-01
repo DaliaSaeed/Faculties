@@ -11,6 +11,7 @@ import { AddFineArtNewsComponent } from './addFineArtNews/add-fine-art-news/add-
 import { AddToursimNewsComponent } from './addToursimNews/add-toursim-news/add-toursim-news.component';
 import { AddArchaeologyNewsComponent } from './addArchaeologyNews/add-archaeology-news/add-archaeology-news.component';
 import { AddAlsunNewsComponent } from './addAlsunNews/add-alsun-news/add-alsun-news.component';
+import {AddMedicineNewsComponent} from  './addMedicineNews/add-medicine-news/add-medicine-news.component'
 export const containers = [
     LoginComponent,
      RegisterComponent,
@@ -24,7 +25,8 @@ export const containers = [
        AddFineArtNewsComponent,
        AddToursimNewsComponent,
        AddArchaeologyNewsComponent,
-       AddAlsunNewsComponent
+       AddAlsunNewsComponent,
+       AddMedicineNewsComponent
     ];
 
 export * from './login/login.component';
@@ -40,3 +42,4 @@ export * from './addFineArtNews/add-fine-art-news/add-fine-art-news.component';
 export * from './addToursimNews/add-toursim-news/add-toursim-news.component';
 export * from './addArchaeologyNews/add-archaeology-news/add-archaeology-news.component';
 export *  from './addAlsunNews/add-alsun-news/add-alsun-news.component';
+export * from  './addMedicineNews/add-medicine-news/add-medicine-news.component';

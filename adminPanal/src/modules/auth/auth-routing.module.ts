@@ -94,6 +94,14 @@ export const ROUTES: Routes = [
         } as SBRouteData,
     },
     {
+        path: 'addMedicineNews',
+        canActivate: [AuthGuard],
+        component: authContainers.AddMedicineNewsComponent,
+        data: {
+            title: 'Add News',
+        } as SBRouteData,
+    },
+    {
         path: 'AllNews',
         canActivate: [AuthGuard],
         component: authContainers.AllNewsComponent,

@@ -62,6 +62,13 @@
                         <a class="nav-link" routerLink="/auth/addAlsunNews">Add Alsun New</a>
                         </li>
                       <!-- End Alsun Auth -->
+
+                      <!-- start Mdeicine Auth -->
+                      <li class="menu-button" *ngIf="this._auth.myData.role=='medicine_user' || this._auth.myData.role=='admin'">
+                        <fa-icon class="icon" [icon]='["fas", "book-open"]'></fa-icon> 
+                        <a class="nav-link" routerLink="/auth/addMedicineNews">Add Medicine New</a>
+                        </li>
+                      <!-- End Alsun Auth -->
                       </ul>
                     </ng-container
             ></ng-container>

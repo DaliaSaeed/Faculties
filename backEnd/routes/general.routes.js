@@ -12,6 +12,7 @@ router.post('/addFineArtNews', auth('general'), upload.array('files'),generalCon
 router.post('/addToursimNews', auth('general'), upload.array('files'),generalController.addToursimNews)
 router.post('/addArchaeologyNews', auth('general'), upload.array('files'),generalController.addArchaeologyNews)
 router.post('/addAlsunNews', auth('general'), upload.array('files'),generalController.addAlsunNews)
+router.post('/addMedicineNews', auth('general'), upload.array('files'),generalController.addMedicineNews)
 
 router.get('/showFciNews',generalController.showFciNews)
 router.get('/showFciSingleNews/:id', generalController.showFciSingleNews)
@@ -27,6 +28,9 @@ router.get('/showArchaeologySingleNews/:id', generalController.showArchaeologySi
 
 router.get('/showAlsunNews',generalController.showAlsunNews)
 router.get('/showAlsunSingleNews/:id', generalController.showAlsunSingleNews)
+
+router.get('/showMedicineNews',generalController.showMedicineNews)
+router.get('/showMedicineSingleNews/:id', generalController.showMedicineSingleNews)
 
 
 

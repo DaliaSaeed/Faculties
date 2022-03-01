@@ -4,6 +4,7 @@ const FineArtNewsModel = require('../models/Fine_Art.model')
 const toursimNewsModel = require('../models/toursim_news.model')
 const AlsunNewsModel = require('../models/alsun_news.model')
 const archaeologyNewsModel = require('../models/toursim_news.model')
+const MedicineNewsModel = require('../models/medicine_news_model')
 const newstModel = require('../models/news.models')
 
 
@@ -114,7 +115,62 @@ class General  {
             })
         }
     }
+    static addMedicineNews = async (req, res)=> {
+        try {
+            const news = await new MedicineNewsModel({
+                ...req.body,
+              // owner: req.user._id,
+               image: req.files
+            })
+            await news.save()
+            res.status(200).send({
+                apiStatus: true,
+                message: 'Succesfully Added',
+                data: news
+            })
+        } catch (e) {
+            res.status(500).send({
+                apiStatus: false,
+                data: e.message,
+                message: " Error in adding News"
+            })
+        }
+    }
     
+    static showMedicineNews = async (req, res) => {
+        try {
+            const news = await MedicineNewsModel.find()
+            res.status(200).send({
+                apiStatus: true,
+                message: 'Successfuly Fetched', 
+                data: news
+            })
+        } catch (e) {
+            res.status(500).send({
+                apiStatus: false,
+                message: e.message,
+            })
+        }
+    }
+    static showMedicineSingleNews =async(req,res)=>{
+        try{
+            const singleNew = await MedicineNewsModel.findById(req.params.id)
+            if(!singleNew) throw new Error("This New not found")
+            res.send({
+                apiStatus:true,
+                data:singleNew
+            })
+        }
+        catch(e){
+            res.send({
+                apiStatus:false,
+                data:e.message,
+                message:"error loading New data"
+            })
+        }
+    
+    }
+
     static showSingleNew = async (req, res) => {
         try {
             const singleNew = await newstModel.findById(req.body.id)
