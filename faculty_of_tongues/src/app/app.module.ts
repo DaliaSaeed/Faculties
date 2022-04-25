@@ -54,6 +54,7 @@ import { CollageNewsComponent } from './components/about/collageNews/collage-new
 import { StudentsGuideComponent } from './components/about/info/students_guide/students-guide/students-guide.component'
 import { SingleEventComponent } from './components/single-event/single-event.component';
 import { CommitteeListsComponent } from './components/about/info/Committee_Lists/committee-lists/committee-lists.component';
+import { GermanComponent } from './components/about/departments/german/german/german.component';
 
 @NgModule({
   declarations: [
@@ -112,7 +113,8 @@ import { CommitteeListsComponent } from './components/about/info/Committee_Lists
     CollageNewsComponent,
     StudentsGuideComponent,
     SingleEventComponent,
-    CommitteeListsComponent
+    CommitteeListsComponent,
+    GermanComponent
   ],
   imports: [
     BrowserModule,

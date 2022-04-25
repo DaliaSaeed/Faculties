@@ -3,7 +3,7 @@ const fciNewsModel = require('../models/fci_news.model')
 const FineArtNewsModel = require('../models/Fine_Art.model')
 const toursimNewsModel = require('../models/toursim_news.model')
 const AlsunNewsModel = require('../models/alsun_news.model')
-const archaeologyNewsModel = require('../models/toursim_news.model')
+const archaeologyNewsModel = require('../models/archaeology_news.model')
 const MedicineNewsModel = require('../models/medicine_news_model')
 const newstModel = require('../models/news.models')
 

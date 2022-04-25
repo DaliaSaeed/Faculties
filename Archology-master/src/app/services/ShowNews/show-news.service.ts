@@ -10,10 +10,10 @@ export class ShowNewsService {
 
   constructor(private _ser:HttpClient) { }
   getNewsData(): Observable<any>{
-    return this._ser.get('http://localhost:3000/general/showArchaeologyNews')
+    return this._ser.get('http://luxor.edu.eg:8999/general/showArchaeologyNews')
   }
 
   getArchaeologySingleNews(id:string):Observable<any>{
-    return this._ser.get(`http://localhost:3000/general/showArchaeologySingleNews/${id}`)
+    return this._ser.get(`http://luxor.edu.eg:8999/general/showArchaeologySingleNews/${id}`)
   }
 }

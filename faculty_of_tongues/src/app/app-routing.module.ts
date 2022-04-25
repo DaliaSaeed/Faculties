@@ -17,6 +17,7 @@ import { ChainceComponent } from './components/about/departments/chainice/chainc
 import { EnglishComponent } from './components/about/departments/english/english/english.component';
 import { FrenchComponent } from './components/about/departments/french/french/french.component';
 import { ItaliyComponent } from './components/about/departments/italiy/italiy/italiy.component';
+import { GermanComponent } from './components/about/departments/german/german/german.component';
 import { RochineComponent } from './components/about/departments/rochine/rochine/rochine.component';
 import { SpainshComponent } from './components/about/departments/spainsh/spainsh/spainsh.component';
 import { SingleEventComponent } from './components/single-event/single-event.component';
@@ -75,9 +76,14 @@ const routes: Routes = [
     path: 'about/info/Italiy',
     component: ItaliyComponent ,
   },
+
   {
     path: 'about/info/Rochine',
     component: RochineComponent ,
+  },
+  {
+    path: 'about/info/German',
+    component: GermanComponent ,
   },
   {
     path: 'single-event/:id',

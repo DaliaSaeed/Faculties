@@ -9,10 +9,10 @@ export class ShowNewsService {
 
   constructor(private _ser:HttpClient) { }
   getNewsData(): Observable<any>{
-    return this._ser.get('http://localhost:3000/general/showToursimNews')
+    return this._ser.get('http://luxor.edu.eg:8999/general/showToursimNews')
   }
 
   getToursimSingleNews(id:string):Observable<any>{
-    return this._ser.get(`http://localhost:3000/general/showToursimSingleNews/${id}`)
+    return this._ser.get(`http://luxor.edu.eg:8999/general/showToursimSingleNews/${id}`)
   }
 }

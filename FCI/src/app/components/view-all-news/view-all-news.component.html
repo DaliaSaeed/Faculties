@@ -7,12 +7,14 @@
   </span>
   <ng-template #Data>
     <div class="card-deck" style="text-align: right;">
-      <div class="card"  *ngFor="let new of allNews?.data | slice:-3">
-        <img style="height: 50%;" class="card-img-top" [src]="apiUrl+new.image[0].path" alt="Card image cap">
+      <div class="card" style="height: 432px;"  *ngFor="let new of allNews?.data | slice:-3">
+        <img style="height: 221px;" class="card-img-top" [src]="apiUrl+new.image[0].path" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">{{new.title}}</h5>
-          <p class="card-text"> {{new.content}}</p>
-          <a  routerLink="/single-event/{{new._id}}">قراءه المزيد</a>
+          <h5 class="card-title">{{new.title | slice:0:41}}...</h5>
+          <p class="card-text"> {{new.content | slice:0:80 }}
+            <a  routerLink="/single-event/{{new._id}}">قراءه المزيد ...</a>
+          </p>
+          
         </div>
         <div class="card-footer">
           <small class="text-muted">{{new.createdAt}}</small>

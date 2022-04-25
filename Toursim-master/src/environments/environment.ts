@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   urlAPI: 'https://facultyqwer.000webhostapp.com/api',
-  Url: 'http://localhost:3000/'
+  Url: 'http://luxor.edu.eg:8999/'
 
 };
 
